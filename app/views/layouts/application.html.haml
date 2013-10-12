@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Alison
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    = yield
+    #dump
+      %p
+        current user:
+        = current_user.inspect
+      %p
+        current session:
+        = current_user_session.inspect
+      - if current_user
+        = link_to 'logout', logout_path
+      - else
+        = link_to 'login', login_path
+      %p= params.inspect

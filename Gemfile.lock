@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    action_mailer_cache_delivery (0.3.2)
+      actionmailer (~> 3.0)
     actionmailer (3.2.14)
       actionpack (= 3.2.14)
       mail (~> 2.5.4)
@@ -202,6 +204,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  action_mailer_cache_delivery (= 0.3.2)
   authlogic (~> 3.2.0)
   capybara (~> 1.1.1)
   ckeditor

@@ -66,7 +66,7 @@ group :test do
   gem "factory_girl", "2.6.4"
   gem "factory_girl_rails"
 
-  # gem 'action_mailer_cache_delivery', '0.3.2'
+  gem 'action_mailer_cache_delivery', '0.3.2' #remember to patch the gem for old hash syntax :symbol => value
   gem 'email_spec'
 end
 

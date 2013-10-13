@@ -15,11 +15,13 @@ Feature: Password Reset
     When I fill in "email" with "user@domain.com"
     And I press "Reset Password"  
 
-    Then I should see password change link in the email
+
+    And I should see password change link in the email
     When I follow Reset Password link in the email
     When I fill in xpath "password" with "newpassword"
     When I fill in xpath "password_confirmation" with "newpassword"    
     And I press "Update Password"
+
     When I am not logged in
     Then I should be able to log in with username "test_user" and password "newpassword"
 

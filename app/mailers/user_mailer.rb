@@ -1,10 +1,12 @@
 class UserMailer < ActionMailer::Base
   @@secrets = YAML.load_file( "#{ Rails.root}/config/secret.yml")
-  if Rails.env == 'development' or  Rails.env == "test" 
+  if Rails.env == 'development' or  Rails.env == "test"
     @@url = "http://localhost:3000"
   else
-    @@url = "http://www.chrisbeard-photography.co.uk"
+    # TODO remember to edit the url below
+    @@url = "http://www.example.com"
   end
+
   default :from => @@secrets['email_server']['user_name']
 
   def contact_form_message(message)
@@ -15,7 +17,7 @@ class UserMailer < ActionMailer::Base
          #:cc => @@secrets['email']['cc'],
          :subject => @message.subject)
   end
-  
+
   def welcome_email(user)
     @user = user
     mail(:to => user.email,
@@ -34,6 +36,6 @@ class UserMailer < ActionMailer::Base
     @url = @@url
     @reset_path = edit_password_reset_path(user.perishable_token)
     mail(:to => user.email,
-         :subject => "Password Reset Instructions")    
+         :subject => "Password Reset Instructions")
   end
 end

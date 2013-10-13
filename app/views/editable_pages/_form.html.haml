@@ -1,0 +1,22 @@
+= form_for @editable_page do |f|
+  - if @editable_page.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@editable_page.errors.count, "error")} prohibited this editable_page from being saved:"
+      %ul
+        - @editable_page.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :window_title
+    = f.text_field :window_title
+  .field
+    = f.label :navbar_title
+    = f.text_field :navbar_title
+  .field
+    = f.label :navbar_index
+    = f.number_field :navbar_index
+  .field
+    = f.label :content
+    = f.text_area :content
+  .actions
+    = f.submit 'Save'

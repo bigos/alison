@@ -1,0 +1,25 @@
+%h1 Listing editable_pages
+
+%table
+  %tr
+    %th Window title
+    %th Navbar title
+    %th Navbar index
+    %th Content
+    %th
+    %th
+    %th
+
+  - @editable_pages.each do |editable_page|
+    %tr
+      %td= editable_page.window_title
+      %td= editable_page.navbar_title
+      %td= editable_page.navbar_index
+      %td= editable_page.content
+      %td= link_to 'Show', editable_page
+      %td= link_to 'Edit', edit_editable_page_path(editable_page)
+      %td= link_to 'Destroy', editable_page, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Editable page', new_editable_page_path

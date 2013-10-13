@@ -1,5 +1,8 @@
 Alison::Application.routes.draw do
 
+  resources :editable_pages
+
+
   match '/activate/:activation_code' => 'activations#create'
   get "activations/create"
 

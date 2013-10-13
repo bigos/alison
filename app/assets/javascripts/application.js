@@ -10,6 +10,21 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require ckeditor/init
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+
+
+CKEDITOR.config.toolbar= [
+    { name: 'basicstyles', items: ['Source', '-', 'Bold', 'Italic','Underline',
+                                   '-', 'Cut', 'Copy', 'Paste',
+                                   '-', 'TextColor','BGColor',
+                                   '-', 'NumberedList', 'BulletedList',
+                                   '-', 'Outdent','Indent',
+                                   '-', 'Link', 'Unlink' ,'-' , 'Image'
+                                  ]
+    }
+]

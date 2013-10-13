@@ -11,7 +11,7 @@
   = @editable_page.navbar_index
 %p
   %b Content:
-  = @editable_page.content
+  != @editable_page.content
 
 = link_to 'Edit', edit_editable_page_path(@editable_page)
 \|

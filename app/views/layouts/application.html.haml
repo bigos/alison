@@ -7,22 +7,26 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = render :partial => 'layouts/navbar'
-
-    = yield
-    #footer
-      &copy; ABC Consulting
-      = Time.now.year
-    #dump
-      %hr
-      %p
-        current user:
-        = current_user.inspect
-      %p
-        current session:
-        = current_user_session.inspect
-      - if current_user
-        = link_to 'logout', logout_path
-      - else
-        = link_to 'login', login_path
-      %p= params.inspect
+    #wrapper
+      #page
+        %div{:style=>'font-size:25px;padding:2em;text-align:center;'}
+          Banner will go here
+        = render :partial => 'layouts/navbar'
+        #main
+          = yield
+        #footer
+          &copy; ABC Consulting
+          = Time.now.year
+        #dump
+          %hr
+          %p
+            current user:
+            = current_user.inspect
+          %p
+            current session:
+            = current_user_session.inspect
+          - if current_user
+            = link_to 'logout', logout_path
+          - else
+            = link_to 'login', login_path
+          %p= params.inspect

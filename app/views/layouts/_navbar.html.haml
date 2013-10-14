@@ -1,4 +1,3 @@
-- EditablePage.order(:navbar_index).each do |ep|
-  = link_to ep.navbar_title,ep
-
-%hr
+.navbar
+  - EditablePage.order(:navbar_index).each do |ep|
+    = link_to ep.navbar_title,ep

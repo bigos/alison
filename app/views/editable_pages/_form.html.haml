@@ -5,18 +5,19 @@
       %ul
         - @editable_page.errors.full_messages.each do |msg|
           %li= msg
+  %div{:style=>"margin-bottom:0.5em;"}
+    = link_to "Toggle Advanced Controls",'#',:onclick=>"$('#controls').toggle();return false;"
+  %div{:id=>'controls',:style=>"display:none;"}
+    .field
+      = f.label :window_title
+      = f.text_field :window_title
+    .field
+      = f.label :navbar_title
+      = f.text_field :navbar_title
+    .field
+      = f.label :navbar_index
+      = f.number_field :navbar_index
 
-  .field
-    = f.label :window_title
-    = f.text_field :window_title
-  .field
-    = f.label :navbar_title
-    = f.text_field :navbar_title
-  .field
-    = f.label :navbar_index
-    = f.number_field :navbar_index
-  .field
-    = f.label :content
-    = f.cktext_area :content
+  = f.cktext_area :content
   .actions
     = f.submit 'Save'

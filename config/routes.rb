@@ -13,6 +13,8 @@ Alison::Application.routes.draw do
   resource :user_session
   resource :account, :controller => "users"
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   root :to => 'user_sessions#new'
 
   # The priority is based upon order of creation:

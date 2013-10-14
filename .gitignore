@@ -16,3 +16,9 @@ rerun.txt
 pickle-email-*.html
 
 /config/secret.yml
+
+# Ignore paperclip assets
+/public/system/
+
+# Ignore ckeditor assets
+/public/ckeditor_assets/

@@ -1,5 +1,7 @@
 Alison::Application.routes.draw do
 
+  get "template/index"
+
   resources :editable_pages
 
 

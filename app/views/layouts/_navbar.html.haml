@@ -1,3 +1,5 @@
 .navbar
+  = link_to "home", root_url
   - EditablePage.order(:navbar_index).each do |ep|
     = link_to ep.navbar_title,ep
+  = link_to 'template', template_index_path

@@ -1,0 +1,13 @@
+#dump
+  %hr
+  %p
+    current user:
+    = current_user.inspect
+  %p
+    current session:
+    = current_user_session.inspect
+  - if current_user
+    = link_to 'logout', logout_path
+  - else
+    = link_to 'login', login_path
+  %p= params.inspect

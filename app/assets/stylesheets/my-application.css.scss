@@ -1,3 +1,4 @@
+
 body { background: #333;
        font-family: arial, verdana, sans-serif; 
      }
@@ -31,4 +32,14 @@ div#main{margin:2em;
 #footer{background:green;
         color:white;
         text-align:center;
+        padding:0.75em; 
        }
+
+.home-page-photo{
+        width:500px;    
+        float:left;
+        margin-right:2em;
+}
+
+.clearfix{clear:both;}
+

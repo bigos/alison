@@ -10,10 +10,14 @@
     #wrapper
       #page
         .banner
+          .abc-logo
+          .osteopathic-clinic
+          - # .simple-healthcare-solutions-logo
+          .clear-both
         = render :partial => 'layouts/navbar'
         #main
           = yield
-        #footer
+        #footer.bar
           &copy; ABC Consulting
           = Time.now.year
         = render :partial => 'layouts/dump' if false

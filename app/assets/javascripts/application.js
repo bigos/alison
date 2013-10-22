@@ -21,7 +21,7 @@
 CKEDITOR.config.toolbar= [
     { name: 'basicstyles', items: ['Source', '-', 'Bold', 'Italic','Underline',
                                    '-', 'Cut', 'Copy', 'Paste',
-                                   '-', 'TextColor','BGColor',
+                                   '-', 'TextColor','BGColor', 'FontSize'
                                    '-', 'NumberedList', 'BulletedList',
                                    '-', 'Outdent','Indent',
                                    '-', 'Link', 'Unlink' ,'-' , 'Image'

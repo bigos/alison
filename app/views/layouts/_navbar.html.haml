@@ -1,7 +1,9 @@
 .navbar.bar
-  = link_to "home", root_url
+
   - EditablePage.order(:navbar_index).each do |ep|
     = link_to ep.navbar_title,ep
   = link_to 'template', template_index_path
   - if current_admin
     = link_to 'logout','/logout', :id=>'logout'
+  - else
+    = link_to "login", root_url, :id=>'logout'

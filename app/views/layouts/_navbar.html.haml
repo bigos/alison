@@ -2,7 +2,7 @@
 
   - EditablePage.order(:navbar_index).each do |ep|
     = link_to ep.navbar_title,ep
-  = link_to 'template', template_index_path
+  = link_to 'home', template_index_path
   - if current_admin
     = link_to 'logout','/logout', :id=>'logout'
   - else

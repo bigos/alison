@@ -9,12 +9,15 @@
   %body
     #wrapper
       #page
-        %div{:style=>'font-size:25px;padding:2em;text-align:center;'}
-          Banner will go here
+        .banner
+          .abc-logo
+          .osteopathic-clinic
+          - # .simple-healthcare-solutions-logo
+          .clear-both
         = render :partial => 'layouts/navbar'
         #main
           = yield
-        #footer
+        #footer.bar
           &copy; ABC Consulting
           = Time.now.year
         = render :partial => 'layouts/dump' if false

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 body { background: #333;
+=======
+body { background: white;
+>>>>>>> 0a513377ae7096d1fae617283eba5a299a083eb0
        font-family: arial, verdana, sans-serif; 
      }
 
@@ -9,29 +13,82 @@ div#wrapper{ margin: 0px auto;
 div#page{  background: white;
            margin-left: auto;
            margin-right: auto;
+           margin-top:50px;
            width: 960px; }
 div#main{margin:2em;
         min-height:300px;}
 
-.navbar{background:green;
-        color:white;
-        padding:0.25em;
+h1{margin-bottom: 1.5em;}
 
+.banner{font-size:25px;
+        padding:0px;
+        text-align:center;
+       //border: solid red 1px; 
+       }
+
+.abc-logo{
+  width:106px;
+  height:76px;
+  margin: 0px 0px 0px 0px;
+  background-image: url( image_path( 'abc-logo.png'));    
+  float:right;
+  z-index: 1;
+  margin-top:0px;
+  margin-left: 0px;
+}
+
+.osteopathic-clinic{
+  background-image: url(image_path('OsteopathicClinic.png'));
+  width:499px;
+  height:121px;
+  //float: left;
+  z-index: 2;
+  //margin-top:0px;
+  //margin-left: auto;
+  //margin-right:auto;
+}
+
+.simple-healthcare-solutions-logo{
+  background-image: url(image_path( 'SimpleHealthcareSolutions.png'));
+  width:265px;
+  height:29px;
+  float:left;
+  z-index: 3;
+  margin-top:90px;
+  margin-left: 300px;
+  //border:solid red 1px;
+}
+
+.bar{
+  background:#009999;
+  color:white;
+  padding-top:5px;
+  height:2em;
+  vertical-align:middle;
+}
+.navbar{padding-left:1.5em;
+  
         a{color:white;
           padding:0.25em;
           text-decoration:none;
-          margin-right:20px;
+          margin-right:3em;;
          }
         a:visited {
             color:white;
         }
         a:hover{background:#aaa;
                }
+        #logout{float:right;
+                margin-top: -3px;}
        }
 
-#footer{background:green;
-        color:white;
+#main{line-height:150%;
+      
+}
+
+#footer{
         text-align:center;
+<<<<<<< HEAD
         padding:0.75em; 
        }
 
@@ -43,3 +100,8 @@ div#main{margin:2em;
 
 .clearfix{clear:both;}
 
+=======
+       }
+
+.clear-both{clear:both;}
+>>>>>>> 0a513377ae7096d1fae617283eba5a299a083eb0
